@@ -37,6 +37,27 @@ body {
 }
 
 
+.header {
+    background-color: #161616;
+}
+
+.github {
+    padding: 20px;
+    width: 85px;
+    height: 85px;
+    filter: invert(40%);
+    margin-left: 1010px;
+}
+
+.linkedin {
+    padding: 18px;
+    width: 90px;
+    height: 90px;
+    filter: invert(40%);
+    margin-left: 10px;
+}
+
+
 
 .intro {
     background-color: #161616;
@@ -48,11 +69,11 @@ body {
 
 .welcome {
     color: #FF355E;
-    padding-top: 180px;
+    padding-top: 120px;
     text-align: left;
     margin-bottom: 20px;
     margin-left: 55px;
-    font-size: 70px;
+    font-size: 55px;
     font-family: "Courier Prime", monospace;
     
 }
@@ -73,7 +94,7 @@ body {
     color: #cac7c7;
     text-align: left;
     margin-left: 55px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Karla", sans-serif;
 }
 
@@ -81,23 +102,29 @@ body {
     color: white;
     text-align: left;
     margin-left: 55px;
-    font-size: 20px;
+    font-size: 18px;
      font-family: "Karla", sans-serif;
 }
 
 
 .getting-to-know {
     color: white;
+    transition: color 0.3s ease;
     text-align: center;
-    margin-top: 180px;
+    margin-top: 175px;
     font-size: 20px;
     font-family: "Karla", sans-serif;
+}
+
+.getting-to-know:hover {
+    color: #FF355E;
+    cursor: pointer;
 }
 
 
 .cube {
     position: absolute;
-    top: 200px;
+    top: 230px;
     right: 250px;
     width: 120px;
     height: 120px;
