@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.courier-prime-regular {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.courier-prime-bold {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.courier-prime-regular-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.courier-prime-bold-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.header {
+    background-color: #242424;
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 500px;
+    
+    
+}
+
+.welcome {
+    color: #FF355E;
+    padding-top: 160px;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 55px;
+    font-size: 100px;
+    font-family: "Courier Prime", monospace;
+    
+}
+
+.welcome::after {
+    content: "|";
+    color: #FF355E;
+    animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+.name-sound {
+    color: white;
+    text-align: left;
+    margin-left: 55px;
+    font-size: 20px;
+    font-family: "Karla", sans-serif;
+}
+
+.name-def {
+    color: white;
+    text-align: left;
+    margin-left: 55px;
+    font-size: 20px;
+     font-family: "Karla", sans-serif;
+}
