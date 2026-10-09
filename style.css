@@ -33,25 +33,26 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    align-items: center;
 }
 
 
-.header {
-    background-color: #242424;
+
+.intro {
+    background-color: #161616;
     width: 100%;
     box-sizing: border-box;
-    padding-bottom: 500px;
-    
+    padding-bottom: 35px; 
     
 }
 
 .welcome {
     color: #FF355E;
-    padding-top: 160px;
+    padding-top: 180px;
     text-align: left;
     margin-bottom: 20px;
     margin-left: 55px;
-    font-size: 100px;
+    font-size: 70px;
     font-family: "Courier Prime", monospace;
     
 }
@@ -69,7 +70,7 @@ body {
 }
 
 .name-sound {
-    color: white;
+    color: #cac7c7;
     text-align: left;
     margin-left: 55px;
     font-size: 20px;
@@ -82,4 +83,87 @@ body {
     margin-left: 55px;
     font-size: 20px;
      font-family: "Karla", sans-serif;
+}
+
+
+.getting-to-know {
+    color: white;
+    text-align: center;
+    margin-top: 180px;
+    font-size: 20px;
+    font-family: "Karla", sans-serif;
+}
+
+
+.cube {
+    position: absolute;
+    top: 200px;
+    right: 250px;
+    width: 120px;
+    height: 120px;
+
+    transform-style: preserve-3d;
+    animation: rotate 8s linear infinite;
+}
+
+.face {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 4px;
+
+    padding: 4px;
+    background: #111;
+    border: 2px solid #111;
+
+    backface-visibility: visible;
+}
+
+.face span {
+    border: 1px solid #111;
+    border-radius: 3px;
+}
+
+/* Six faces */
+.front {
+    transform: translateZ(60px);
+}
+.front span { background: #FF355E; }
+
+.back {
+    transform: rotateY(180deg) translateZ(60px);
+}
+.back span { background: #FF8C42; }
+
+.right {
+    transform: rotateY(90deg) translateZ(60px);
+}
+.right span { background: #2D7DFF; }
+
+.left {
+    transform: rotateY(-90deg) translateZ(60px);
+}
+.left span { background: #35C96F; }
+
+.top {
+    transform: rotateX(90deg) translateZ(60px);
+}
+.top span { background: #FFD43B; }
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(60px);
+}
+.bottom span { background: #F5F5F5; }
+
+@keyframes rotate {
+    from {
+        transform: rotateX(-25deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(-25deg) rotateY(360deg);
+    }
 }
