@@ -180,7 +180,7 @@ body {
 }
 
 .front span {
-    background: #FF355E;
+    background: #FF8C42;
 }
 
 .back {
@@ -188,7 +188,7 @@ body {
 }
 
 .back span {
-    background: #FF8C42;
+    background: #FF355E;
 }
 
 .right {
@@ -370,3 +370,6 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+
+
