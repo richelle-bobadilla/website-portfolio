@@ -1,81 +1,102 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #161616;
+    color: white;
+}
+
+/* Fonts */
+
 .courier-prime-regular {
-  font-family: "Courier Prime", monospace;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .courier-prime-bold {
-  font-family: "Courier Prime", monospace;
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Courier Prime", monospace;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .courier-prime-regular-italic {
-  font-family: "Courier Prime", monospace;
-  font-weight: 400;
-  font-style: italic;
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .courier-prime-bold-italic {
-  font-family: "Courier Prime", monospace;
-  font-weight: 700;
-  font-style: italic;
+    font-family: "Courier Prime", monospace;
+    font-weight: 700;
+    font-style: italic;
 }
 
-
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    align-items: center;
-}
-
+/* Header */
 
 .header {
     background-color: #161616;
+    width: 100%;
 }
 
-.github {
-    padding: 20px;
-    width: 85px;
-    height: 85px;
-    filter: invert(40%);
-    margin-left: 1010px;
+.socials {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 4%;
+    position: sticky;
 }
 
+.github,
 .linkedin {
-    padding: 18px;
-    width: 90px;
-    height: 90px;
+    display: block;
+    width: 55px;
+    height: 55px;
+    padding: 8px;
+    object-fit: contain;
     filter: invert(40%);
-    margin-left: 10px;
+    transition: filter 0.3s ease;
 }
 
+.github:hover,
+.linkedin:hover {
+    filter: invert(70%);
+}
 
+/* Introduction */
 
 .intro {
-    background-color: #161616;
+    position: relative;
     width: 100%;
-    box-sizing: border-box;
-    padding-bottom: 35px; 
-    
+    min-height: 480px;
+    padding: 70px 4% 80px;
+    background-color: #161616;
+    margin-top: 40px;
 }
 
 .welcome {
     color: #FF355E;
-    padding-top: 120px;
+    font-family: "Courier Prime", monospace;
+    font-size: clamp(36px, 4vw, 55px);
     text-align: left;
     margin-bottom: 20px;
-    margin-left: 55px;
-    font-size: 55px;
-    font-family: "Courier Prime", monospace;
-    
 }
 
 .welcome::after {
@@ -93,25 +114,25 @@ body {
 .name-sound {
     color: #cac7c7;
     text-align: left;
-    margin-left: 55px;
     font-size: 18px;
     font-family: "Karla", sans-serif;
+    margin-bottom: 10px;
 }
 
 .name-def {
     color: white;
     text-align: left;
-    margin-left: 55px;
     font-size: 18px;
-     font-family: "Karla", sans-serif;
+    font-family: "Karla", sans-serif;
 }
 
+/* Getting to know me */
 
 .getting-to-know {
     color: white;
     transition: color 0.3s ease;
     text-align: center;
-    margin-top: 175px;
+    margin-top: 195px;
     font-size: 20px;
     font-family: "Karla", sans-serif;
 }
@@ -121,14 +142,14 @@ body {
     cursor: pointer;
 }
 
+/* Rotating Rubik's Cube */
 
 .cube {
     position: absolute;
-    top: 230px;
-    right: 250px;
+    top: 100px;
+    right: 25%;
     width: 120px;
     height: 120px;
-
     transform-style: preserve-3d;
     animation: rotate 8s linear infinite;
 }
@@ -137,16 +158,13 @@ body {
     position: absolute;
     width: 120px;
     height: 120px;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 4px;
-
     padding: 4px;
     background: #111;
     border: 2px solid #111;
-
     backface-visibility: visible;
 }
 
@@ -156,41 +174,199 @@ body {
 }
 
 /* Six faces */
+
 .front {
     transform: translateZ(60px);
 }
-.front span { background: #FF355E; }
+
+.front span {
+    background: #FF355E;
+}
 
 .back {
     transform: rotateY(180deg) translateZ(60px);
 }
-.back span { background: #FF8C42; }
+
+.back span {
+    background: #FF8C42;
+}
 
 .right {
     transform: rotateY(90deg) translateZ(60px);
 }
-.right span { background: #2D7DFF; }
+
+.right span {
+    background: #2D7DFF;
+}
 
 .left {
     transform: rotateY(-90deg) translateZ(60px);
 }
-.left span { background: #35C96F; }
+
+.left span {
+    background: #35C96F;
+}
 
 .top {
     transform: rotateX(90deg) translateZ(60px);
 }
-.top span { background: #FFD43B; }
+
+.top span {
+    background: #FFD43B;
+}
 
 .bottom {
     transform: rotateX(-90deg) translateZ(60px);
 }
-.bottom span { background: #F5F5F5; }
+
+.bottom span {
+    background: #F5F5F5;
+}
 
 @keyframes rotate {
     from {
         transform: rotateX(-25deg) rotateY(0deg);
     }
+
     to {
         transform: rotateX(-25deg) rotateY(360deg);
     }
+}
+
+/* About Me */
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 50px 44px;
+}
+
+.about-content {
+    flex: 1;
+    min-width: 0;
+    max-width: 720px;
+    padding: 25px;
+    border-radius: 12px;
+
+     box-shadow: 0 0 20px transparent;
+    transition: box-shadow 1s ease-in-out;
+}
+
+.about-content:hover {
+    box-shadow: 0 0 20px #FF355E;
+}
+
+.about-me {
+    color: #FF355E;
+    text-align: left;
+    font-size: clamp(32px, 4vw, 50px);
+    font-family: "Courier Prime", monospace;
+}
+
+.about-desc {
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: left;
+    max-width: 500px;
+    line-height: 1.6;
+    transition: box-shadow 1.2s ease;
+}
+
+.about-content:hover {
+    box-shadow: 0 0 2spx #FF355E;
+}
+
+.profile-pic-container {
+    flex: 0 0 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 130px;
+
+}
+
+.profile-pic {
+    display: block;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .intro {
+        min-height: 520px;
+        padding: 50px 24px 60px;
+    }
+
+    .welcome {
+        font-size: 40px;
+    }
+
+    .name-sound,
+    .name-def {
+        font-size: 16px;
+    }
+
+    .cube {
+        top: 280px;
+        right: calc(50% - 60px);
+    }
+
+    .about-me-link{
+        margin-top: 70px;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    .about-me {
+        margin-left: 24px;
+        font-size: 36px;
+    }
+
+    .socials {
+        padding: 10px 20px;
+    }
+}
+
+/* Small phones */
+
+@media (max-width: 400px) {
+    .intro {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .welcome {
+        font-size: 34px;
+    }
+
+    .name-sound,
+    .name-def {
+        font-size: 14px;
+    }
+
+    .github,
+    .linkedin {
+        width: 48px;
+        height: 48px;
+    }
+
+    .about-me {
+        margin-left: 18px;
+        font-size: 30px;
+    }
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
