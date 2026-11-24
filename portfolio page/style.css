@@ -331,6 +331,7 @@ body {
     max-width: 1360px;
     margin: 0 auto;
     padding: 50px 44px;
+    
 }
 
 .about-content {
@@ -338,16 +339,11 @@ body {
     min-width: 0;
     max-width: 720px;
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 20px;
     color: white;
-
-    box-shadow: 0 0 20px transparent;
-    transition: box-shadow 1s ease-in-out;
+    background-color: #212121;
 }
 
-.about-content:hover {
-    box-shadow: 0 0 20px #FF355E;
-}
 
 .about-me {
     color: #FF355E;
@@ -457,3 +453,5 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+
